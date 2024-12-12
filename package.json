@@ -1,13 +1,19 @@
 {
   "type": "commonjs",
   "dependencies": {
-    "@wopee-io/wopee.pw": "^4.8.0",
     "@playwright/test": "^1.43.1",
+    "@wopee-io/wopee.pw": "^4.8.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "scripts": {
     "test": "npm run pw",
-    "pw": "npx playwright test --config playwright.config.ts"
+    "pw": "npx playwright test --config playwright.config.ts",
+    "dento:01-baselines": "cross-env WOPEE_SUITE_NAME='Dento Baselines' playwright test tests/Dento",
+    "dento:0x-regression": "cross-env WOPEE_SUITE_NAME='Dento Regression' playwright test tests/Dento",
+    "zoho:01-baselines": "cross-env WOPEE_SUITE_NAME='Zoho Baselines' playwright test tests/Zoho",
+    "zoho:0x-regression": "cross-env WOPEE_SUITE_NAME='Zoho Regression' playwright test tests/Zoho"
   }
 }
