@@ -1,8 +1,9 @@
 import { test as base } from "@playwright/test";
 import { Wopee } from "@wopee-io/wopee.pw";
+
 require("dotenv").config();
 
-const suiteName = process.env.WOPEE_SUITE_NAME || "defaultSuiteName";
+const suiteName = process.env.WOPEE_SUITE_NAME || "Wopee Demo";
 
 type wopeeFixture = {
   wopee: Wopee;
@@ -23,15 +24,15 @@ const test = base.extend<wopeeFixture>({
   },
 });
 
-test.beforeEach(async ({ wopee }, testInfo) => {
-  const scenarioName = `${testInfo.title} - ${testInfo.project.name}`;
-  try {
-    await wopee.startScenario(scenarioName);
-  } catch (error: any) {
-    console.error(`Failed to start scenario '${scenarioName}':`, error);
-    throw new Error(`WOPEE scenario start failed: ${error.message}`);
-  }
-});
+// test.beforeEach(async ({ wopee }, testInfo) => {
+//   const scenarioName = `${testInfo.title} - ${testInfo.project.name}`;
+//   try {
+//     await wopee.startScenario(scenarioName);
+//   } catch (error: any) {
+//     console.error(`Failed to start scenario '${scenarioName}':`, error);
+//     throw new Error(`WOPEE scenario start failed: ${error.message}`);
+//   }
+// });
 
 test.afterEach(async ({ wopee }) => {
   try {

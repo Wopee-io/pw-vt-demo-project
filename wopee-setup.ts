@@ -1,10 +1,13 @@
 import { Wopee } from "@wopee-io/wopee.pw";
+import { timestamp } from "./utils/timestamp";
+
 require("dotenv").config();
 
 async function globalSetup() {
-  const suiteName =
-    process.env.WOPEE_SUITE_NAME ||
-    `Example ${new Date().toISOString().substring(0, 16)}`;
+  const suiteName = `${
+    process.env.WOPEE_SUITE_NAME || "Wopee Demo"
+  } - ${timestamp}`;
+
   const wopee = new Wopee();
 
   try {

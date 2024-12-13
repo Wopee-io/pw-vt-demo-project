@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "playwright test",
-    "dento": "cross-env WOPEE_SUITE_NAME=\"Dento Regression $(ts-node timestamp.ts)\" playwright test tests/Dento",
-    "zoho": "cross-env WOPEE_SUITE_NAME=\"Zoho Regression $(ts-node timestamp.ts)\" playwright test tests/Zoho"
+    "dento": "cross-env WOPEE_SUITE_NAME=Dento playwright test tests/Dento",
+    "zoho": "cross-env WOPEE_SUITE_NAME=Zoho playwright test tests/Zoho",
+    "generali": "cross-env WOPEE_SUITE_NAME=Generali playwright test tests/Generali"
   }
 }
