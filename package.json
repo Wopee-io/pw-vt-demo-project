@@ -9,9 +9,8 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "test": "npm run pw",
-    "pw": "npx playwright test --config playwright.config.ts",
-    "dento": "cross-env WOPEE_SUITE_NAME=\"Dento Regression $(node -e \"process.stdout.write(new Date().toISOString())\")\" playwright test tests/Dento",
-    "zoho": "cross-env WOPEE_SUITE_NAME=\"Zoho Regression $(node -e \"process.stdout.write(new Date().toISOString())\")\" playwright test tests/Zoho"
+    "test": "playwright test",
+    "dento": "cross-env WOPEE_SUITE_NAME=\"Dento Regression $(ts-node timestamp.ts)\" playwright test tests/Dento",
+    "zoho": "cross-env WOPEE_SUITE_NAME=\"Zoho Regression $(ts-node timestamp.ts)\" playwright test tests/Zoho"
   }
 }
