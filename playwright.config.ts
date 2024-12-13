@@ -1,6 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
+  globalSetup: "./wopee-setup.ts",
+
   testDir: "./tests/",
   snapshotPathTemplate: "baselines{/projectName}/{testFilePath}/{arg}{ext}",
   fullyParallel: true,

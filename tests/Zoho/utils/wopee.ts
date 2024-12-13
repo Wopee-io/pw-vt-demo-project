@@ -1,11 +1,10 @@
-import { suiteName } from "./fixtures";
-
 async function checkPage(page, wopee, scenarioName, stepName) {
+  await page.waitForLoadState("networkidle");
   await wopee.trackFullPage({
     page,
     stepName,
     scenarioName,
-    suiteName,
+    suiteName: process.env.WOPEE_SUITE_NAME,
   });
 }
 

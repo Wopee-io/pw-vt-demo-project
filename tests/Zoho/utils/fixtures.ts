@@ -2,9 +2,7 @@ import { test as base } from "@playwright/test";
 import { Wopee } from "@wopee-io/wopee.pw";
 require("dotenv").config();
 
-const suiteName =
-  process.env.WOPEE_SUITE_NAME ||
-  `Example ${new Date().toISOString().substring(0, 16)}`;
+const suiteName = process.env.WOPEE_SUITE_NAME || "defaultSuiteName";
 
 type wopeeFixture = {
   wopee: Wopee;
@@ -45,4 +43,4 @@ test.afterEach(async ({ wopee }) => {
   }
 });
 
-export { test, suiteName };
+export { test };
