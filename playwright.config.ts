@@ -54,15 +54,4 @@ export default defineConfig({
       },
     },
   ],
-
-  // projects: [
-  //   {
-  //     name: "chrome",
-  //     use: {
-  //       headless: true,
-  //       viewport: { width: 1600, height: 1000 },
-  //       channel: "chrome",
-  //     },
-  //   },
-  // ],
 });

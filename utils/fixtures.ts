@@ -24,16 +24,6 @@ const test = base.extend<wopeeFixture>({
   },
 });
 
-// test.beforeEach(async ({ wopee }, testInfo) => {
-//   const scenarioName = `${testInfo.title} - ${testInfo.project.name}`;
-//   try {
-//     await wopee.startScenario(scenarioName);
-//   } catch (error: any) {
-//     console.error(`Failed to start scenario '${scenarioName}':`, error);
-//     throw new Error(`WOPEE scenario start failed: ${error.message}`);
-//   }
-// });
-
 test.afterEach(async ({ wopee }) => {
   try {
     await wopee.stopScenario();
