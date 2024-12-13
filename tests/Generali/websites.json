@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Home page",
+    "url": "https://www.generaliceska.cz/",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Travel Insurance",
+    "url": "https://www.generaliceska.cz/cestovni-pojisteni-online-sjednani",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Vehicle Insurance",
+    "url": "https://sjednat.generaliceska.cz/pojisteni-vozidel/uvod",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Property Insurance",
+    "url": "https://www.generaliceska.cz/majetek-online-sjednani#/",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Liability Insurance",
+    "url": "https://www.generaliceska.cz/odpovednost-online-sjednani#/",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Pet Insurance",
+    "url": "https://sjednat.generaliceska.cz/mazlicek/vas-mazlicek",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Claims Reporting",
+    "url": "https://hlaseni.generaliceska.cz/",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  },
+  {
+    "name": "Login",
+    "url": "https://kz.generaliceska.cz/?screen=SU5ERVg%3D",
+    "cookieLocator": "button#onetrust-accept-btn-handler"
+  }
+]
