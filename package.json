@@ -11,9 +11,7 @@
   "scripts": {
     "test": "npm run pw",
     "pw": "npx playwright test --config playwright.config.ts",
-    "dento:01-baselines": "cross-env WOPEE_SUITE_NAME='Dento Baselines' playwright test tests/Dento",
-    "dento:0x-regression": "cross-env WOPEE_SUITE_NAME='Dento Regression' playwright test tests/Dento",
-    "zoho:01-baselines": "cross-env WOPEE_SUITE_NAME='Zoho Baselines' playwright test tests/Zoho",
-    "zoho:0x-regression": "cross-env WOPEE_SUITE_NAME='Zoho Regression' playwright test tests/Zoho"
+    "dento": "cross-env WOPEE_SUITE_NAME=\"Dento Regression $(node -e \"process.stdout.write(new Date().toISOString())\")\" playwright test tests/Dento",
+    "zoho": "cross-env WOPEE_SUITE_NAME=\"Zoho Regression $(node -e \"process.stdout.write(new Date().toISOString())\")\" playwright test tests/Zoho"
   }
 }
