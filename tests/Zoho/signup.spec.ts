@@ -1,5 +1,5 @@
-import { test } from "./utils/fixtures";
-import { checkPage } from "./utils/wopee";
+import { test } from "../../utils/fixtures";
+import { checkPage } from "../../utils/wopee";
 
 test.describe("Zoho Signup Page Testing - Demo", () => {
   const baseURL = "https://www.zoho.com/crm/signup.html";
