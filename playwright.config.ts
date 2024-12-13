@@ -8,6 +8,7 @@ export default defineConfig({
   fullyParallel: true,
   // timeout: 100000,
   reporter: "html",
+  retries: 3,
   use: {
     screenshot: "only-on-failure",
     trace: "on-first-retry",
