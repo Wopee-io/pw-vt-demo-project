@@ -6,11 +6,15 @@ test.describe("Zoho Signing Page Testing - Demo", () => {
 
   test("01 Signin", async ({ page, wopee }, testInfo) => {
     await page.goto(baseURL + "/signin");
+    await page.waitForSelector("button >> text=Next");
+
     await checkPage(page, wopee, testInfo.title, testInfo.project.name);
   });
 
   test("02 Signin - ZohoCRM", async ({ page, wopee }, testInfo) => {
     await page.goto(baseURL + "/signin?servicename=ZohoCRM");
+    await page.waitForSelector("button >> text=Next");
+
     await checkPage(page, wopee, testInfo.title, testInfo.project.name);
   });
 
