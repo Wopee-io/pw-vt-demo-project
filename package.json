@@ -2,16 +2,19 @@
   "type": "commonjs",
   "dependencies": {
     "@playwright/test": "^1.43.1",
-    "@wopee-io/wopee.pw": "^4.8.0",
+    "@wopee-io/wopee.pw": "^4.17.1",
+    "axios": "^1.7.9",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "test": "playwright test",
     "dento": "cross-env WOPEE_SUITE_NAME=Dento playwright test tests/Dento",
     "zoho": "cross-env WOPEE_SUITE_NAME=Zoho playwright test tests/Zoho",
+    "sitemap": "cross-env WOPEE_SUITE_NAME=Sitemaps playwright test tests/Sitemaps",
     "generali": "cross-env WOPEE_SUITE_NAME=Generali playwright test tests/Generali"
   }
 }

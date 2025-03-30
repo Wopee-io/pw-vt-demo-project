@@ -1,7 +1,14 @@
 require("dotenv").config();
 import { expect } from "@playwright/test";
 
-async function checkPage(page, wopee, scenarioName, stepName, retries = 1) {
+async function checkPage(
+  page,
+  wopee,
+  scenarioName,
+  stepName,
+  retries = 3, // default retries
+  comment = ""
+) {
   let attempt = 0;
 
   while (attempt <= retries) {
@@ -10,6 +17,8 @@ async function checkPage(page, wopee, scenarioName, stepName, retries = 1) {
       stepName,
       scenarioName,
       suiteName: process.env.WOPEE_SUITE_NAME,
+      comment,
+      customTag: "ABC"
     });
 
     if (wopeeResult.status !== "unresolved") return;

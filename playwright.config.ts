@@ -18,17 +18,17 @@ export default defineConfig({
   // https://github.com/microsoft/playwright/blob/main/packages/playwright-core/src/server/deviceDescriptorsSource.json
   projects: [
     {
-      name: "chromium",
+      name: "Chromium",
       use: { ...devices["Desktop Chrome"] },
     },
 
     {
-      name: "firefox",
+      name: "Firefox",
       use: { ...devices["Desktop Firefox"] },
     },
 
     {
-      name: "webkit",
+      name: "Webkit",
       use: { ...devices["Desktop Safari"] },
     },
 

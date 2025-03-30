@@ -5,11 +5,19 @@ import websites from "./websites.json";
 
 test.describe("Generali Visual Testing - Demo", () => {
   for (const website of websites) {
-    const scenarioName = `Page: ${website.name}`;
+    const scenarioName = `Generali: ${website.name}`;
     test(scenarioName, async ({ page, wopee }, testInfo) => {
       await page.goto(website.url);
       await page.click(website.cookieLocator);
-      await checkPage(page, wopee, scenarioName, testInfo.project.name);
+
+      await checkPage(
+        page,
+        wopee,
+        scenarioName,
+        testInfo.project.name,
+        undefined,
+        website.url
+      );
     });
   }
 });
