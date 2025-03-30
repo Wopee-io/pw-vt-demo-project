@@ -12,7 +12,6 @@
   },
   "scripts": {
     "test": "playwright test",
-    "dento": "cross-env WOPEE_SUITE_NAME=Dento playwright test tests/Dento",
     "zoho": "cross-env WOPEE_SUITE_NAME=Zoho playwright test tests/Zoho",
     "sitemap": "cross-env WOPEE_SUITE_NAME=Sitemaps playwright test tests/Sitemaps",
     "generali": "cross-env WOPEE_SUITE_NAME=Generali playwright test tests/Generali"
