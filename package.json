@@ -14,6 +14,7 @@
     "test": "playwright test",
     "zoho": "cross-env WOPEE_SUITE_NAME=Zoho playwright test tests/Zoho",
     "sitemap": "cross-env WOPEE_SUITE_NAME=Sitemaps playwright test tests/Sitemaps",
-    "generali": "cross-env WOPEE_SUITE_NAME=Generali playwright test tests/Generali"
+    "generali": "cross-env WOPEE_SUITE_NAME=Generali playwright test tests/Generali",
+    "amazon": "cross-env WOPEE_SUITE_NAME=Amazon playwright test tests/Amazon"
   }
 }
