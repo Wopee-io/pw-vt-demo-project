@@ -5,7 +5,7 @@ on:
 
 jobs:
     test:
-        runs-on: self-hosted
+        runs-on: [self-hosted, wopee]
         steps:
           - uses: actions/checkout@v4
 
